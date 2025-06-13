@@ -18,4 +18,4 @@ class GetSubuserUserListService:
             data_list = dict_data.get("data", [])
             return default_parse_list_dict(data_list, SubuserUserList, [])
 
-        return RestApiSyncClient(**kwargs).request_process(HttpMethod.GET, channel, self.params, parse)
+        return RestApiSyncClient(**kwargs).request_process(HttpMethod.GET_SIGN, channel, self.params, parse)
